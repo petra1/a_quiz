@@ -71,6 +71,13 @@ Create the layout for the question screen using a Figma screenshot.
 Use the following image to design 
 the question screen of the app. Use the file question_screen.dart for the question screen.
 
+The answer_button.dart file should be used for the layout of all buttons in the app. 
+
+The app_theme.dart file should be used for the theme.
+
+
+![question_screen](https://github.com/user-attachments/assets/95c8b562-1346-4ec6-8b38-0884a0680e42)
+
 
 Phase 6:
 
@@ -79,21 +86,10 @@ Create the layout for the result screen using a Figma screenshot.
 Use the following image to design 
 the result screen of the app. Use the file result_screen.dartfor the result screen.
 
-
-Phase 7:
-
-Now that all the layouts for the required screens have been created, it is time to check them.
-
-Create a working app with the following specifications:
-
-1. When the app is started, the start screen should be displayed. The layout for the start screen is in the file start_screen.dart.
+![result_screen](https://github.com/user-attachments/assets/cdb678a6-d4fe-47a1-b70d-cec374856650)
 
 
-2.. When the user clicks on the ‘Start Quit’ button, the question screen should be displayed. The layout for the question screen can be found in the file question_screen.dart.
 
-3. when the user clicks on the ‘Submit answer’ button, the result screen should be displayed. The layout for the result_screen.dart can be found in the file result_screen.dart
 
-4. when the user clicks on the ‘Restart Quiz’ button, the question screen should be displayed. The layout for the result_screen.dart can be found in the file result_screen.dart.
 
-5. When the user clicks on the ‘Submit’ button, the result screen should be displayed. The layout for the question screen can be found in the file question_screen.dart. 
 
