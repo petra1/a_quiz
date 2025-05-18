@@ -46,73 +46,8 @@ Run the command flutter pub get.
 Don't do anything else yet.	
 
 
+
 Phase 4:
-
-Insert  the following questions in the file questions.dart.
-Don't do anything with the inserted questions yet.
-const questions = [
-  QuizQuestion('What does WCAG stand for?', [
-    'Web Content Accessibility Guidelines',
-    'Web Content Adaptability Guide',
-    'Website Content Accessibility Guide',
-    'Web Compliance Accessibility Guide',
-  ]),
-  QuizQuestion(
-    'Which principle of WCAG focuses on ensuring content is perceivable?',
-    ['Perceivable', 'Operable', 'Understandable', 'Robust'],
-  ),
-  QuizQuestion(
-    'What is the purpose of alternative text (alt text) for images?',
-    [
-      'To provide a visual description of the image for screen reader users',
-      'To improve the image loading speed',
-      'To decorate the image with a caption',
-      'To hide the image from search engines',
-    ],
-  ),
-
-  QuizQuestion(
-    'Why is it important to ensure websites are keyboard accessible?',
-    [
-      'To accommodate users who cannot use a mouse',
-      'To improve the website\'s SEO ranking',
-      'To make the website load faster',
-      'To simplify the website design process',
-    ],
-  ),
-  QuizQuestion(
-    'Which WCAG guideline advises providing text alternatives for any non-text content?',
-    ['Guideline 1.1', 'Guideline 2.2', 'Guideline 3.3', 'Guideline 4.1'],
-  ),
-  QuizQuestion('What is ARIA?', [
-    'Accessible Rich Internet Applications',
-    'Advanced Responsive Internet Access',
-    'Augmented Reality Interface Assistant',
-    'Automated Regulatory Information Archive',
-  ]),
-  QuizQuestion(
-    'Which ARIA attribute is used to define a label for an object?',
-    ['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-title'],
-  ),
-  QuizQuestion('What is the purpose of the tabindex attribute?', [
-    'To define the order in which elements receive focus when navigated by the keyboard',
-    'To change the font size of the text',
-    'To add a shadow to the element',
-    'To make the element invisible',
-  ]),
-  QuizQuestion('How can you ensure that form elements are accessible?', [
-    'By providing clear labels and instructions',
-    'By using placeholder text instead of labels',
-    'By removing all form validation',
-    'By using only JavaScript for form submission',
-  ]),
-  QuizQuestion(
-    'What is the recommended contrast ratio between text and background for normal text according to WCAG 2.2?',
-    ['4.5:1', '2:1', '3:1', '5:1'],
-  ),
-];
-
-Phase 5:
 Create the layout for the start screen using a Figma screenshot.
 
 Use the following image to design 
@@ -123,21 +58,21 @@ The answer_button.dart file should be used for the layout of all buttons in the 
 The app_theme.dart file should be used for the theme.
 
 
-Phase 6:
+Phase 5:
 Create the layout for the question screen using a Figma screenshot.
 
 Use the following image to design 
 the question screen of the app. Use the file question_screen.dart for the question screen.
 
 
-Phase 7:
+Phase 6:
 Create the layout for the result screen using a Figma screenshot.
 
 Use the following image to design 
 the result screen of the app. Use the file result_screen.dartfor the result screen.
 
 
-Phase 8:
+Phase 7:
 
 Now that all the layouts for the required screens have been created, it is time to check them.
 
