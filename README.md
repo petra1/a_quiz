@@ -60,6 +60,9 @@ The answer_button.dart file should be used for the layout of all buttons in the 
 
 The app_theme.dart file should be used for the theme.
 
+![start_screen jpg](https://github.com/user-attachments/assets/8541bc1a-bd84-47c8-9194-fe28ccc5245f)
+
+
 
 Phase 5:
 
