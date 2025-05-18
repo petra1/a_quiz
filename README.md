@@ -1,6 +1,7 @@
 # a_quiz
 
 Overview:
+
 A Quiz App about WCAG 2.2 and Web accessibility.
 
 It is a mobile app with multiple-choice questions, for each of which 4 possible answers are available. The user can confirm their answer with a ‘Submit Answer’ button when they are ready. At the end of the quiz, the user is shown how many of the total number of questions they answered correctly on their first attempt. 
@@ -9,11 +10,13 @@ The project is created with Cursor AI, an AI tool for programmers. However, the 
 
 
 Phase 1:
+
 Create a new flutter project in the local folder /Users/petraritter/flutter_projekts on my MacBook name the project a_quiz.
 Don't do anything else yet.
 open the newly created project
 
 Phase 2:
+
 Create the flowing folder structure in the lib folder of the project.
 Leave the newly created files empty
 
@@ -38,6 +41,7 @@ Check whether the folder structure has been created correctly.  Show the result 
 Don't do anything else yet.	
 
 Phase 3:
+
 Add the following image to the  folder assets/images and make the corresponding entry in the assets: section of the pubspec.yaml file.
 
 Check whether the image is present iassets/images and the has been entry created correctly in the pubspec.yaml file.  
@@ -46,6 +50,7 @@ Don't do anything else yet.
 
 
 Phase 4:
+
 Create the layout for the start screen using a Figma screenshot.
 
 Use the following image to design 
@@ -57,6 +62,7 @@ The app_theme.dart file should be used for the theme.
 
 
 Phase 5:
+
 Create the layout for the question screen using a Figma screenshot.
 
 Use the following image to design 
@@ -64,6 +70,7 @@ the question screen of the app. Use the file question_screen.dart for the questi
 
 
 Phase 6:
+
 Create the layout for the result screen using a Figma screenshot.
 
 Use the following image to design 
