@@ -84,9 +84,27 @@ Phase 6:
 Create the layout for the result screen using a Figma screenshot.
 
 Use the following image to design 
-the result screen of the app. Use the file result_screen.dartfor the result screen.
+the result screen of the app. Use the file result_screen.dartfor the result screen. 
+
+
 
 ![result_screen](https://github.com/user-attachments/assets/cdb678a6-d4fe-47a1-b70d-cec374856650)
+
+And the logic for displaying the questions and for processing and displaying the answers implemented.
+
+Phase 7:
+
+Testing the basic app with 10 Questions.
+
+**Status pending**
+
+Phase 8:
+
+Add more Questens and make the app fully accessible.
+
+**Status pending**
+
+
 
 
 
