@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/answer_button.dart';
 import '../config/app_theme.dart';
+import '../data/questions.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({
@@ -15,8 +16,31 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  var currentQuestionIndex = 0;
+  String? selectedAnswer;
+
+  void answerQuestion(String answer) {
+    setState(() {
+      selectedAnswer = answer;
+    });
+  }
+
+  void submitAnswer() {
+    if (selectedAnswer == null) return;
+
+    widget.onSelectAnswer(selectedAnswer!);
+    setState(() {
+      selectedAnswer = null;
+      if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final currentQuestion = questions[currentQuestionIndex];
+
     return Container(
       decoration: const BoxDecoration(
         color: AppTheme.backgroundColor,
@@ -27,9 +51,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              'Placeholder for Questions',
-              style: TextStyle(
+            Text(
+              currentQuestion.text,
+              style: const TextStyle(
                 color: AppTheme.foregroundColor,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -37,39 +61,23 @@ class _QuestionScreenState extends State<QuestionScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
-            AnswerButton(
-              answerText: 'Answer 1',
-              onTap: () {
-                widget.onSelectAnswer('Answer 1');
-              },
-            ),
-            const SizedBox(height: 10),
-            AnswerButton(
-              answerText: 'Answer 2',
-              onTap: () {
-                widget.onSelectAnswer('Answer 2');
-              },
-            ),
-            const SizedBox(height: 10),
-            AnswerButton(
-              answerText: 'Answer 3',
-              onTap: () {
-                widget.onSelectAnswer('Answer 3');
-              },
-            ),
-            const SizedBox(height: 10),
-            AnswerButton(
-              answerText: 'Answer 4',
-              onTap: () {
-                widget.onSelectAnswer('Answer 4');
-              },
-            ),
+            ...currentQuestion.getShuffledAnswers().map((answer) {
+              return Column(
+                children: [
+                  AnswerButton(
+                    answerText: answer,
+                    onTap: () => answerQuestion(answer),
+                    isSelected: selectedAnswer == answer,
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              );
+            }),
             const SizedBox(height: 20),
             AnswerButton(
               answerText: 'Submit answer',
-              onTap: () {
-                // Submit answer functionality will be added later
-              },
+              onTap: selectedAnswer != null ? submitAnswer : null,
+              isDisabled: selectedAnswer == null,
             ),
           ],
         ),
