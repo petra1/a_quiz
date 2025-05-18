@@ -96,7 +96,7 @@ Phase 7:
 
 Testing the basic app with 10 Questions.
 
-**Status pending**
+**Attention: a short test has shown that the app does not work properly. Extensive testing will follow in the next few days.**
 
 Phase 8:
 
