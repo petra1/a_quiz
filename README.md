@@ -38,13 +38,11 @@ Check whether the folder structure has been created correctly.  Show the result 
 Don't do anything else yet.	
 
 Phase 3:
-
 Add the following image to the  folder assets/images and make the corresponding entry in the assets: section of the pubspec.yaml file.
 
 Check whether the image is present iassets/images and the has been entry created correctly in the pubspec.yaml file.  
 Run the command flutter pub get.
 Don't do anything else yet.	
-
 
 
 Phase 4:
