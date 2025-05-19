@@ -96,9 +96,17 @@ Phase 7:
 
 Testing the basic app with 10 Questions.
 
-**Attention: a short test has shown that the app does not work properly. Extensive testing will follow in the next few days.**
+**More tests need to be carried out to ensure that the app works properly.**
 
 Phase 8:
+
+It's time to debug the app.
+
+1. Call the file start_screen.dart within the file main.dart. Remove all unnecessary code including the comments from the main.dart file. 
+2. The ‘Start Quiz’ button on the start screen should lead to the question screen when the user clicks on it.
+
+
+Phase 9:
 
 Add more Questens and make the app fully accessible.
 
