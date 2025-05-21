@@ -3,9 +3,9 @@ import '../widgets/answer_button.dart';
 import '../config/app_theme.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key, required this.startQuiz});
+  const StartScreen({super.key, required this.onStart});
 
-  final void Function() startQuiz;
+  final void Function() onStart;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class StartScreen extends StatelessWidget {
             const SizedBox(height: 80),
             AnswerButton(
               answerText: 'Start Quiz',
-              onTap: startQuiz,
+              onTap: onStart,
             ),
           ],
         ),

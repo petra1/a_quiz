@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import '../widgets/answer_button.dart';
 import '../config/app_theme.dart';
-import '../data/questions.dart';
+import '../models/quiz_question.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({
     super.key,
     required this.onSelectAnswer,
+    required this.questions,
   });
 
   final void Function(String answer) onSelectAnswer;
+  final List<QuizQuestion> questions;
 
   @override
   State<QuestionScreen> createState() => _QuestionScreenState();
@@ -31,7 +33,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
     widget.onSelectAnswer(selectedAnswer!);
     setState(() {
       selectedAnswer = null;
-      if (currentQuestionIndex < questions.length - 1) {
+      if (currentQuestionIndex < widget.questions.length - 1) {
         currentQuestionIndex++;
       }
     });
@@ -39,7 +41,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final currentQuestion = questions[currentQuestionIndex];
+    final currentQuestion = widget.questions[currentQuestionIndex];
 
     return Container(
       decoration: const BoxDecoration(

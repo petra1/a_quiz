@@ -4,7 +4,7 @@ class AppTheme {
   static const backgroundColor = Color.fromARGB(255, 0, 128, 0); // Green background
   static const foregroundColor = Colors.white;
   
-  static final theme = ThemeData(
+  static final lightTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
       seedColor: backgroundColor,
