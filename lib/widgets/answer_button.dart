@@ -21,10 +21,10 @@ class AnswerButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: isDisabled ? null : onTap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: isSelected ? Colors.green.withOpacity(0.3) : Colors.white,
+        backgroundColor: isSelected ? Colors.green.withAlpha(77) : Colors.white,
         foregroundColor: isSelected ? Colors.white : AppTheme.backgroundColor,
-        disabledBackgroundColor: Colors.white.withOpacity(0.3),
-        disabledForegroundColor: Colors.white.withOpacity(0.5),
+        disabledBackgroundColor: Colors.white.withAlpha(77),
+        disabledForegroundColor: Colors.white.withAlpha(128),
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),

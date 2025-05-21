@@ -72,8 +72,8 @@ class ResultScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: isCorrect 
-                              ? Colors.green.withOpacity(0.2)
-                              : Colors.red.withOpacity(0.2),
+                              ? Colors.green.withAlpha(51)
+                              : Colors.red.withAlpha(51),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
