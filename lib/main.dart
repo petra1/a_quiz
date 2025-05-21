@@ -3,7 +3,6 @@ import 'screens/start_screen.dart';
 import 'screens/question_screen.dart';
 import 'screens/result_screen.dart';
 import 'config/app_theme.dart';
-import 'models/quiz_question.dart';
 import 'data/questions.dart' as quiz_data;
 
 void main() {

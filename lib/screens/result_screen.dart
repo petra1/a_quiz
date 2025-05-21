@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../widgets/answer_button.dart';
 import '../config/app_theme.dart';
 import '../models/quiz_question.dart';
@@ -52,7 +53,7 @@ class ResultScreen extends StatelessWidget {
             children: [
               Text(
                 'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
-                style: const TextStyle(
+                style: GoogleFonts.lato(
                   color: AppTheme.foregroundColor,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -79,7 +80,7 @@ class ResultScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Question ${(data['question_index'] as int) + 1}',
-                              style: const TextStyle(
+                              style: GoogleFonts.lato(
                                 color: AppTheme.foregroundColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
@@ -88,7 +89,7 @@ class ResultScreen extends StatelessWidget {
                             const SizedBox(height: 8),
                             Text(
                               data['question'] as String,
-                              style: const TextStyle(
+                              style: GoogleFonts.lato(
                                 color: AppTheme.foregroundColor,
                                 fontSize: 14,
                               ),
@@ -96,7 +97,7 @@ class ResultScreen extends StatelessWidget {
                             const SizedBox(height: 8),
                             Text(
                               'Your answer: ${data['user_answer']}',
-                              style: TextStyle(
+                              style: GoogleFonts.lato(
                                 color: isCorrect 
                                     ? Colors.green[200]
                                     : Colors.red[200],
@@ -107,7 +108,7 @@ class ResultScreen extends StatelessWidget {
                               const SizedBox(height: 4),
                               Text(
                                 'Correct answer: ${data['correct_answer']}',
-                                style: TextStyle(
+                                style: GoogleFonts.lato(
                                   color: Colors.green[200],
                                   fontSize: 14,
                                 ),
