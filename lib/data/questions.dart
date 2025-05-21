@@ -69,10 +69,10 @@ const questions = [
   QuizQuestion(
     'What is the recommended minimum target size for touch elements?',
     [
+      '24x24 pixels',
       '44x44 pixels',
       '20x20 pixels',
       '10x10 pixels',
-      '100x100 pixels',
     ],
   ),
   QuizQuestion(
