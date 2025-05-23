@@ -2,7 +2,7 @@
 
 Overview:
 
- Quiz App about WCAG 2.2 and Web accessibility.
+A Quiz App about WCAG 2.2 and Web accessibility.
 
 It is a mobile app with multiple-choice questions, for each of which 4 possible answers are available. The user can confirm their answer with a ‘Submit Answer’ button when they are ready. At the end of the quiz, the user is shown how many of the total number of questions they answered correctly on their first attempt. 
 
@@ -104,7 +104,7 @@ It's time to debug the app.
 
 1. Call the file start_screen.dart within the file main.dart. Remove all unnecessary code including the comments from the main.dart file. 
 2. The ‘Start Quiz’ button on the start screen should lead to the question screen when the user clicks on it.
-3. 3. When the user has answered the last question, the result screen should be displayed. 
+   When the user has answered the last question, the result screen should be displayed. 
 
 
 
