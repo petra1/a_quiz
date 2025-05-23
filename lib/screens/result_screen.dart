@@ -78,39 +78,58 @@ class ResultScreen extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Question ${(data['question_index'] as int) + 1}',
-                              style: GoogleFonts.lato(
-                                color: AppTheme.foregroundColor,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                            Container(
+                              width: double.infinity,
+                              child: Text(
+                                'Question ${(data['question_index'] as int) + 1}',
+                                style: GoogleFonts.lato(
+                                  color: AppTheme.foregroundColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                             const SizedBox(height: 8),
-                            Text(
-                              data['question'] as String,
-                              style: GoogleFonts.lato(
-                                color: AppTheme.foregroundColor,
-                                fontSize: 14,
+                            Container(
+                              width: double.infinity,
+                              child: Text(
+                                data['question'] as String,
+                                style: GoogleFonts.lato(
+                                  color: AppTheme.foregroundColor,
+                                  fontSize: 14,
+                                ),
+                                overflow: TextOverflow.visible,
+                                softWrap: true,
                               ),
                             ),
                             const SizedBox(height: 8),
-                            Text(
-                              'Your answer: ${data['user_answer']}',
-                              style: GoogleFonts.lato(
-                                color: isCorrect 
-                                    ? Colors.green[200]
-                                    : Colors.red[200],
-                                fontSize: 14,
+                            Container(
+                              width: double.infinity,
+                              child: Text(
+                                'Your answer: ${data['user_answer']}',
+                                style: GoogleFonts.lato(
+                                  color: isCorrect 
+                                      ? Colors.green[200]
+                                      : Colors.red[200],
+                                  fontSize: 14,
+                                ),
+                                overflow: TextOverflow.visible,
+                                softWrap: true,
                               ),
                             ),
                             if (!isCorrect) ...[
                               const SizedBox(height: 4),
-                              Text(
-                                'Correct answer: ${data['correct_answer']}',
-                                style: GoogleFonts.lato(
-                                  color: Colors.green[200],
-                                  fontSize: 14,
+                              Container(
+                                width: double.infinity,
+                                child: Text(
+                                  'Correct answer: ${data['correct_answer']}',
+                                  style: GoogleFonts.lato(
+                                    color: Colors.green[200],
+                                    fontSize: 14,
+                                  ),
+                                  overflow: TextOverflow.visible,
+                                  softWrap: true,
                                 ),
                               ),
                             ],
