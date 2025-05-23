@@ -2,7 +2,7 @@
 
 Overview:
 
-A Quiz App about WCAG 2.2 and Web accessibility.
+ Quiz App about WCAG 2.2 and Web accessibility.
 
 It is a mobile app with multiple-choice questions, for each of which 4 possible answers are available. The user can confirm their answer with a ‘Submit Answer’ button when they are ready. At the end of the quiz, the user is shown how many of the total number of questions they answered correctly on their first attempt. 
 
