@@ -104,7 +104,7 @@ It's time to debug the app.
 
 1. Call the file start_screen.dart within the file main.dart. Remove all unnecessary code including the comments from the main.dart file. 
 2. The ‘Start Quiz’ button on the start screen should lead to the question screen when the user clicks on it.
-   When the user has answered the last question, the result screen should be displayed. 
+3.  When the user has answered the last question, the result screen should be displayed. 
 
 
 
