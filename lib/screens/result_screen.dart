@@ -43,7 +43,14 @@ class ResultScreen extends StatelessWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        color: AppTheme.backgroundColor,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color.fromARGB(255, 0, 100, 0),
+            Color.fromARGB(255, 0, 15, 0),
+          ],
+        ),
       ),
       child: Center(
         child: Padding(
@@ -71,9 +78,7 @@ class ResultScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: isCorrect 
-                              ? Colors.green.withAlpha(51)
-                              : Colors.red.withAlpha(51),
+                          color: Colors.green.withAlpha(51),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +88,7 @@ class ResultScreen extends StatelessWidget {
                               child: Text(
                                 'Question ${(data['question_index'] as int) + 1}',
                                 style: GoogleFonts.lato(
-                                  color: AppTheme.foregroundColor,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
                                 ),
@@ -96,8 +101,9 @@ class ResultScreen extends StatelessWidget {
                               child: Text(
                                 data['question'] as String,
                                 style: GoogleFonts.lato(
-                                  color: AppTheme.foregroundColor,
-                                  fontSize: 14,
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
                                 ),
                                 overflow: TextOverflow.visible,
                                 softWrap: true,
@@ -110,9 +116,10 @@ class ResultScreen extends StatelessWidget {
                                 'Your answer: ${data['user_answer']}',
                                 style: GoogleFonts.lato(
                                   color: isCorrect 
-                                      ? Colors.green[200]
-                                      : Colors.red[200],
-                                  fontSize: 14,
+                                      ? Colors.white
+                                      : const Color(0xFFF6A2BE),
+                                  fontSize: 18,
+                                  fontWeight: isCorrect ? FontWeight.normal : FontWeight.bold,
                                 ),
                                 overflow: TextOverflow.visible,
                                 softWrap: true,
@@ -125,8 +132,9 @@ class ResultScreen extends StatelessWidget {
                                 child: Text(
                                   'Correct answer: ${data['correct_answer']}',
                                   style: GoogleFonts.lato(
-                                    color: Colors.green[200],
-                                    fontSize: 14,
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                   overflow: TextOverflow.visible,
                                   softWrap: true,

@@ -46,7 +46,14 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
     return Container(
       decoration: const BoxDecoration(
-        color: AppTheme.backgroundColor,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color.fromARGB(255, 0, 100, 0),
+            Color.fromARGB(255, 0, 15, 0),
+          ],
+        ),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
