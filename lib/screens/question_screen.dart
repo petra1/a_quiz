@@ -21,6 +21,17 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIndex = 0;
   String? selectedAnswer;
+  late List<List<String>> shuffledAnswersForQuestions;
+
+  @override
+  void initState() {
+    super.initState();
+    // Shuffle answers for all questions once when the screen is created
+    shuffledAnswersForQuestions = widget.questions.map((question) {
+      final shuffled = List.of(question.answers)..shuffle();
+      return shuffled;
+    }).toList();
+  }
 
   void answerQuestion(String answer) {
     setState(() {
@@ -43,6 +54,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
     final currentQuestion = widget.questions[currentQuestionIndex];
+    final currentAnswers = shuffledAnswersForQuestions[currentQuestionIndex];
 
     return Container(
       decoration: const BoxDecoration(
@@ -71,7 +83,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
-            ...currentQuestion.getShuffledAnswers().map((answer) {
+            ...currentAnswers.map((answer) {
               return Column(
                 children: [
                   AnswerButton(
