@@ -109,6 +109,9 @@ It's time to debug the app.
 5.  Use the colour pink and font size 18 for an incorrect answer from the user.
 6. Use the same background colour for an incorrect answer from the user as for correct answers.
 7. Use bold font for an incorrect answer from the user.
+8. In the answer screen, the answer button clicked by the user changes position in the order of the answer buttons.
+Can you confirm this? And explain to me why this is and what needs to be done so that the reply button clicked by the user retains its position in the order of the reply buttons. Do not change the code yet
+implement solutions 1. **The solotion 1 was Either shuffle the answers only once when the question is first created
 
 
 
