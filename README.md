@@ -122,7 +122,16 @@ Phase 9:
 
 Add more Questens and make the app fully accessible.
 
-**Status pending**
+Add a total of 100 questions about WCAG 2.1, 2.2, Level A and AA, as erll as general Web Accessibility.
+
+- Basic WCAG Concepts: 2 questions
+- WCAG 2.1 Level A: 13 questions
+- WCAG 2.1 Level AA: 9 questions (after replacing 5 with general questions)
+- WCAG 2.2 Level A: 3 questions
+- WCAG 2.2 Level AA: 2 questions
+- ARIA and HTML Accessibility: 46 questions
+- General Web Accessibility Questions: 25 questions (20 original + 5 from WCAG 2.1 Level AA)
+
 
 
 
