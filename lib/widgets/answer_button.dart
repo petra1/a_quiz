@@ -18,24 +18,29 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: isDisabled ? null : onTap,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: isSelected ? Colors.green.withAlpha(77) : Colors.white,
-        foregroundColor: isSelected ? Colors.white : AppTheme.backgroundColor,
-        disabledBackgroundColor: Colors.white.withAlpha(77),
-        disabledForegroundColor: Colors.white.withAlpha(128),
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(40),
+    return SizedBox(
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: isDisabled ? null : onTap,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: isSelected ? Colors.green.withAlpha(77) : Colors.white,
+          foregroundColor: isSelected ? Colors.white : AppTheme.backgroundColor,
+          disabledBackgroundColor: Colors.white.withAlpha(77),
+          disabledForegroundColor: Colors.white.withAlpha(128),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(40),
+          ),
         ),
-      ),
-      child: Text(
-        answerText,
-        style: GoogleFonts.lato(
-          fontSize: 16,
+        child: Text(
+          answerText,
+          style: GoogleFonts.lato(
+            fontSize: 16,
+          ),
+          textAlign: TextAlign.center,
+          softWrap: true,
+          overflow: TextOverflow.visible,
         ),
-        textAlign: TextAlign.center,
       ),
     );
   }
