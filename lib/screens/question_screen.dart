@@ -78,14 +78,31 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
-                      currentQuestion.text,
-                      style: GoogleFonts.lato(
-                        color: AppTheme.foregroundColor,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+                    Semantics(
+                      liveRegion: true,
+                      child: Column(
+                        children: [
+                          Text(
+                            'Question ${currentQuestionIndex + 1} of ${widget.questions.length}',
+                            style: GoogleFonts.lato(
+                              color: AppTheme.foregroundColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 20),
+                          Text(
+                            currentQuestion.text,
+                            style: GoogleFonts.lato(
+                              color: AppTheme.foregroundColor,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
                       ),
-                      textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 30),
                     ...currentAnswers.map((answer) {

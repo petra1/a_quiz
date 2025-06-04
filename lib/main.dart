@@ -4,6 +4,8 @@ import 'screens/question_screen.dart';
 import 'screens/result_screen.dart';
 import 'config/app_theme.dart';
 import 'data/questions.dart' as quiz_data;
+import 'models/quiz_question.dart';
+import 'dart:math';
 
 void main() {
   runApp(const QuizApp());
@@ -19,9 +21,26 @@ class QuizApp extends StatefulWidget {
 class _QuizAppState extends State<QuizApp> {
   String activeScreen = 'start-screen';
   List<String> selectedAnswers = [];
+  late List<QuizQuestion> selectedQuestions;
+
+  @override
+  void initState() {
+    super.initState();
+    // Select 20 random questions when the app starts
+    selectedQuestions = _selectRandomQuestions(20);
+  }
+
+  List<QuizQuestion> _selectRandomQuestions(int count) {
+    final random = Random();
+    final questions = List<QuizQuestion>.from(quiz_data.questions);
+    questions.shuffle(random);
+    return questions.take(count).toList();
+  }
 
   void switchScreen() {
     setState(() {
+      // Reselect questions when starting a new quiz
+      selectedQuestions = _selectRandomQuestions(20);
       activeScreen = 'question-screen';
     });
   }
@@ -29,7 +48,7 @@ class _QuizAppState extends State<QuizApp> {
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
 
-    if (selectedAnswers.length == quiz_data.questions.length) {
+    if (selectedAnswers.length == selectedQuestions.length) {
       setState(() {
         activeScreen = 'result-screen';
       });
@@ -39,6 +58,8 @@ class _QuizAppState extends State<QuizApp> {
   void restartQuiz() {
     setState(() {
       selectedAnswers = [];
+      // Reselect questions when restarting
+      selectedQuestions = _selectRandomQuestions(20);
       activeScreen = 'start-screen';
     });
   }
@@ -50,7 +71,7 @@ class _QuizAppState extends State<QuizApp> {
     if (activeScreen == 'question-screen') {
       screenWidget = QuestionScreen(
         onSelectAnswer: chooseAnswer,
-        questions: quiz_data.questions,
+        questions: selectedQuestions,
       );
     }
 
@@ -58,7 +79,7 @@ class _QuizAppState extends State<QuizApp> {
       screenWidget = ResultScreen(
         chosenAnswers: selectedAnswers,
         onRestart: restartQuiz,
-        questions: quiz_data.questions,
+        questions: selectedQuestions,
       );
     }
 
